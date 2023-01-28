@@ -17,6 +17,7 @@ namespace CleaningServices1
         CleaningServicesEntities g = new CleaningServicesEntities();
         protected void Page_Load(object sender, EventArgs e)
         {
+
             var ratings = from r in g.Ratings select new {
                 r.Booking.ClientName,
                 r.Comment,
@@ -31,6 +32,32 @@ namespace CleaningServices1
                 }
                 mainComment.InnerHtml += $" <div class=\"item\">\r\n                            <div class=\"testimony-wrap py-4\">\r\n                                <div class=\"icon d-flex align-items-center justify-content-center\"><span class=\"fa fa-quote-right\"></span></div>\r\n                                <div class=\"text\">\r\n                                    <div class=\"d-flex align-items-center mb-4\">\r\n                                        <div class=\"user-img\" style=\"background-image: url(images/pngegg.png)\"></div>\r\n                                        <div class=\"pl-3\">\r\n                                            <p class=\"name\">{item.ClientName}</p>\r\n                                            <span class=\"position\" style='color:yellow; font-size:18px' >{item.Rating1}&nbsp;<i class=\"fa-solid fa-star\"></i></span>\r\n                                        </div>\r\n                                    </div>\r\n                                    <p class=\"mb-1\" style='overflow:hidden; width:100%; height:70px;' >{item.Comment}</p>\r\n                                </div>\r\n                            </div>\r\n                        </div>";
             }
+
+            var rating = from r in g.Ratings
+                          select new
+                          {
+
+                              r.Rating1
+                          };
+
+            var jobsDone = g.Bookings.Where(a => a.Status == "Done").Count();
+
+            int count = 0;
+            foreach (var item in rating)
+            {
+                if (item.Rating1 < 3)
+                {
+                    continue;
+                }
+                count++;
+            }
+
+
+
+
+
+            happyCustomers.Attributes.Add("data-number", count.ToString());
+            jobs.Attributes.Add("data-number", jobsDone.ToString());
         }
        
         protected void book_click(object sender, EventArgs e)

@@ -149,19 +149,19 @@
                         <div class="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
                             <div class="block-18">
                                 <div class="text">
-                                    <strong class="number" data-number="45">0</strong>
+                                    <strong class="number" data-number="4" id="">0</strong>
                                 </div>
                                 <div class="text">
                                     <span>Years of
                                         <br>
-                                        Experienced</span>
+                                        Experience</span>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
                             <div class="block-18">
                                 <div class="text">
-                                    <strong class="number" data-number="2342">0</strong>
+                                    <strong class="number" id="happyCustomers" runat="server">0</strong>
                                 </div>
                                 <div class="text">
                                     <span>Happy
@@ -173,7 +173,7 @@
                         <div class="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
                             <div class="block-18">
                                 <div class="text">
-                                    <strong class="number" data-number="30">0</strong>
+                                    <strong class="number" id="jobs" runat="server">0</strong>
                                 </div>
                                 <div class="text">
                                     <span>Building
