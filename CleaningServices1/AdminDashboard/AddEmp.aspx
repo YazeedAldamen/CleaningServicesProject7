@@ -226,7 +226,7 @@
                                                 <asp:RequiredFieldValidator runat="server" ControlToValidate="txtEmail"
                                                     CssClass="text-danger" ErrorMessage=" The email field is required." ValidationGroup="EMP" />
                                                 <br />
-                                                <label for="password">Password:</label>
+                                                <label for="password" >Password:</label>
                                                 <asp:TextBox CssClass="txtAdd" ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
                                                 <asp:RequiredFieldValidator runat="server" ControlToValidate="txtPassword"
                                                     CssClass="text-danger" ErrorMessage=" The Password field is required." ValidationGroup="EMP" />

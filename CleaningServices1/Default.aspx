@@ -81,11 +81,10 @@
 
                                 <div class="col-12 col-md d-flex align-items-center">
                                     <div class="form-group py-md-4 py-2 px-4 px-md-0">
-                                        <label for="name">Select your location</label>
+                                        <label for="name" >Select your location</label>
                                         <br />
                                         <asp:LinkButton OnClick="location_click" ID="LinkButton1" runat="server">
-                                           <i runat="server"  style="font-size:50px; color:#2b98f0" class="fa-solid fa-location-crosshairs"></i>				         
-
+                                           <i runat="server"  style="font-size:50px; color:#2b98f0" class="fa-solid fa-location-crosshairs"></i>
                                         </asp:LinkButton>
                                     </div>
                                 </div>

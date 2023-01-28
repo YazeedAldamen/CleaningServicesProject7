@@ -457,7 +457,7 @@
 
                     }],
                     labels: [
-                        "Bathroom",
+                        "Carpets",
                         "Bedroom",
                         "Car",
                         "Pool"
